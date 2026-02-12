@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { RAMADAN_PLAN } from '../constants';
+import { RAMADAN_PLAN } from '../constants.ts';
 
 const RamadanPlanner: React.FC = () => {
   const [currentTime, setCurrentTime] = useState(new Date());

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Resource } from '../types';
+import { Resource } from '../types.ts';
 
 interface ResourceCardProps {
   resource: Resource;

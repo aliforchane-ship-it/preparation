@@ -1,12 +1,12 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
-import Navbar from './components/Navbar';
-import ResourceCard from './components/ResourceCard';
-import RamadanPlanner from './components/RamadanPlanner';
-import AdviceSection from './components/AdviceSection';
-import LoginPage from './components/LoginPage';
-import { RESOURCES } from './constants';
-import { ResourceCategory } from './types';
+import Navbar from './components/Navbar.tsx';
+import ResourceCard from './components/ResourceCard.tsx';
+import RamadanPlanner from './components/RamadanPlanner.tsx';
+import AdviceSection from './components/AdviceSection.tsx';
+import LoginPage from './components/LoginPage.tsx';
+import { RESOURCES } from './constants.ts';
+import { ResourceCategory } from './types.ts';
 
 const App: React.FC = () => {
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(() => {
@@ -41,7 +41,7 @@ const App: React.FC = () => {
 
       <main className="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {activeTab === 'resources' && (
-          <div className="space-y-8 animate-in fade-in duration-500">
+          <div className="space-y-8 animate-in">
             <div className="flex flex-col md:flex-row gap-4 items-center justify-between mb-10">
               <div>
                 <h1 className="text-4xl font-extrabold text-slate-900 tracking-tight mb-2">
@@ -87,13 +87,13 @@ const App: React.FC = () => {
         )}
 
         {activeTab === 'ramadan' && (
-          <div className="max-w-4xl mx-auto animate-in slide-in-from-bottom-4 duration-500">
+          <div className="max-w-4xl mx-auto animate-in">
             <RamadanPlanner />
           </div>
         )}
 
         {activeTab === 'advice' && (
-          <div className="animate-in fade-in duration-500">
+          <div className="animate-in">
             <AdviceSection />
           </div>
         )}
@@ -109,10 +109,10 @@ const App: React.FC = () => {
             </div>
             <span className="font-bold text-slate-700">TSI PrepHub</span>
           </div>
-          <p className="text-slate-500 text-sm">
+          <p className="text-slate-500 text-sm text-center md:text-left">
             © {new Date().getFullYear()} Développé pour la communauté TSI. Bonne chance pour vos concours !
           </p>
-          <div className="flex gap-4">
+          <div className="flex items-center gap-4">
             <button 
               onClick={() => setIsLoggedIn(false)}
               className="text-slate-400 hover:text-indigo-600 text-sm font-medium transition-colors"

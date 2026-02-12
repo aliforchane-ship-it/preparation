@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ADVICE_LIST } from '../constants';
+import { ADVICE_LIST } from '../constants.ts';
 
 const AdviceSection: React.FC = () => {
   return (
